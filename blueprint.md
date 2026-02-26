@@ -31,7 +31,9 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 9.  **Úprava patičky (footeru).** (Hotovo)
 10. **Integrace menu do Hero sekce.** (Hotovo)
 11. **Úprava Hero sekce.** (Hotovo)
-12. **Změna barvy patičky.** (Právě probíhá)
-    *   Sjednocení barvy pozadí patičky s barvou "DECOR".
-    *   Úprava barvy textu pro zajištění čitelnosti.
+12. **Změna barvy patičky.** (Hotovo)
+13. **Oprava designu Hero sekce.** (Právě probíhá)
+    *   Oprava barev v hlavním nadpisu.
+    *   Zvětšení mezery mezi tlačítky.
+    *   Sjednocení velikosti tlačítek.
 

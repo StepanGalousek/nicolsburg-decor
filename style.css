@@ -50,7 +50,6 @@ section {
 
 #hero {
     position: relative;
-    color: white;
     text-align: center;
     padding: 8rem 2rem 6rem;
     background: url('images/Gemini_Generated_Image_8ex4x98ex4x98ex4.jpg') no-repeat center center/cover;
@@ -65,13 +64,15 @@ section {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    color: white; /* Výchozí barva pro text, který není ve spanu */
 }
 
-.hero-content .color-primary {
-    color: #113253; 
+/* Opravené barvy pro nadpis s vyšší specificitou */
+.hero-content h1 .color-primary {
+    color: #113253;
 }
 
-.hero-content .color-secondary {
+.hero-content h1 .color-secondary {
     color: #C1A273;
 }
 
@@ -89,13 +90,15 @@ section {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
+/* Oprava: Větší mezera mezi tlačítky */
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem; /* Zvětšená mezera */
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* Oprava: Sjednocená velikost tlačítek */
 .btn {
     padding: 1rem 2rem;
     text-decoration: none;
@@ -106,6 +109,9 @@ section {
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border: 2px solid transparent;
+    min-width: 240px; /* Sjednocená minimální šířka */
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .btn-primary {
