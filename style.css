@@ -52,12 +52,19 @@ section {
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #333; /* Tmavě šedá */
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
 }
 
 .hero-content p {
     color: #333; /* Tmavě šedá */
+    margin-bottom: 2rem;
 }
 
 .btn {
@@ -68,6 +75,8 @@ section {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin-top: 1rem; /* Odsazení tlačítka */
+    display: inline-block; /* Aby fungoval margin-top */
 }
 
 .btn:hover {
@@ -154,8 +163,22 @@ section {
 }
 
 #contact {
-    background-color: #333;
-    color: white;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-info {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #ff6600; /* Oranžová barva pro odkazy */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 #contact form {
@@ -163,6 +186,15 @@ section {
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contact h2 {
+    color: #333;
+    margin-bottom: 2rem;
 }
 
 #contact input,
@@ -170,12 +202,93 @@ section {
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #ccc;
 }
 
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    margin-bottom: 1rem;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* === Responzivní design === */
+
+/* Pro tablety a menší zařízení (až do 992px) */
+@media (max-width: 992px) {
+    .service-item,
+    .review {
+        width: calc(50% - 4rem); /* 2 položky na řádek s mezerou */
+    }
+}
+
+
+/* Pro tablety (až do 768px) */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Odkazy pod sebou */
+        margin: 0;
+    }
+
+    nav ul {
+        padding: 1rem 0 0 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem 0; /* Menší padding */
+    }
+
+    main {
+        padding-top: 180px; /* Zvýšené odsazení kvůli menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    #gallery .gallery-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Pro mobilní telefony (až do 576px) */
+@media (max-width: 576px) {
+    main {
+        padding-top: 210px; /* Ještě více odsazení */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-item,
+    .review {
+        width: 90%; /* Jedna položka na řádek */
+    }
+
+    #contact form {
+        width: 90%;
+        margin: 0 auto;
+    }
 }

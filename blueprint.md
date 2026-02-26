@@ -12,7 +12,7 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 3.  **Naše služby:** Přehled nabízených služeb s ikonami a krátkým popisem.
 4.  **Recenze:** Ukázky spokojenosti předchozích zákazníků.
 5.  **Před a po galerie:** Interaktivní galerie srovnávající stav před a po realizaci.
-6.  **Kontakt:** Formulář pro rychlé a snadné odeslání poptávky.
+6.  **Kontakt:** Formulář pro rychlé a snadné odeslání poptávky a přímé kontaktní údaje.
 
 ## Design a technologie
 
@@ -23,6 +23,10 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 
 1.  **Vytvoření základní struktury HTML.** (Hotovo)
 2.  **Stylování jednotlivých sekcí pomocí CSS.** (Hotovo)
-3.  **Přidání interaktivity pomocí JavaScriptu (pokud bude potřeba).**
-4.  **Přidání sekce "Naše služby".** (Právě probíhá)
+3.  **Přidání sekce "Naše služby".** (Hotovo)
+4.  **Optimalizace pro mobilní telefony a tablety.** (Hotovo)
+5.  **Aktualizace Hero sekce.** (Hotovo)
+6.  **Vytvoření složky pro obrázky.** (Hotovo)
+7.  **Přidání kontaktních údajů.** (Právě probíhá)
+8.  **Přidání interaktivity pomocí JavaScriptu (pokud bude potřeba).**
 
