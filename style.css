@@ -90,51 +90,40 @@ section {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* Oprava: Větší mezera mezi tlačítky */
 .hero-buttons {
     display: flex;
-    gap: 2rem; /* Zvětšená mezera */
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-/* Oprava: Sjednocená velikost tlačítek */
+/* Nový sjednocený styl tlačítek s modrým okrajem */
 .btn {
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s;
     margin-top: 1rem; 
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border: 2px solid transparent;
-    min-width: 240px; /* Sjednocená minimální šířka */
+    min-width: 240px;
     text-align: center;
     box-sizing: border-box;
-}
-
-.btn-primary {
-    background-color: #ff6600;
-    color: white;
-    border-color: #ff6600;
-}
-
-.btn-primary:hover {
-    background-color: #cc5200;
-    border-color: #cc5200;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #C1A273;
-    border-color: #C1A273;
-}
-
-.btn-secondary:hover {
     background-color: #C1A273;
     color: white;
+    border: 2px solid #113253; /* Tmavě modrý okraj */
 }
+
+.btn:hover {
+    background-color: #d4b98f; /* Lehce světlejší hořčicová */
+    border-color: #113253; /* Tmavě modrý okraj i při hoveru */
+    color: white;
+}
+
+/* Staré specifické třídy jsou resetovány, styl je sjednocen v .btn */
+.btn-primary, .btn-secondary { }
+.btn-primary:hover, .btn-secondary:hover { }
 
 
 #about {

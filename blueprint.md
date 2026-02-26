@@ -32,8 +32,9 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 10. **Integrace menu do Hero sekce.** (Hotovo)
 11. **Úprava Hero sekce.** (Hotovo)
 12. **Změna barvy patičky.** (Hotovo)
-13. **Oprava designu Hero sekce.** (Právě probíhá)
-    *   Oprava barev v hlavním nadpisu.
-    *   Zvětšení mezery mezi tlačítky.
-    *   Sjednocení velikosti tlačítek.
+13. **Oprava designu Hero sekce.** (Hotovo)
+14. **Sjednocení designu tlačítek.** (Hotovo)
+    *   Sjednocení stylu pro všechna tlačítka v Hero sekci.
+    *   Základní stav: hořčicové pozadí, bílý text, tmavě modrý okraj.
+    *   Hover stav: lehké zesvětlení pozadí.
 
