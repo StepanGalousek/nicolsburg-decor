@@ -9,21 +9,21 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#hero">Úvod</a></li>
-                <li><a href="#about">O nás</a></li>
-                <li><a href="#services">Služby</a></li>
-                <li><a href="#reviews">Recenze</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section id="hero" class="fade-in-section">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#hero">Úvod</a></li>
+                        <li><a href="#about">O nás</a></li>
+                        <li><a href="#services">Služby</a></li>
+                        <li><a href="#reviews">Recenze</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </header>
+
             <div class="hero-content">
                 <h1>Nicolsburg decor</h1>
                 <h2>Profesionální malířské služby</h2>
@@ -124,12 +124,20 @@
     <button id="back-to-top-btn" title="Zpět nahoru"><i class="fas fa-arrow-up"></i></button>
 
     <footer>
-        <div class="footer-content">
-            <p><strong>Jan Novák</strong></p>
-            <p>E-mail: <a href="mailto:jan.novak@email.cz">jan.novak@email.cz</a></p>
-            <p>Telefon: <a href="tel:+420123456789">+420 123 456 789</a></p>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p><strong>Jan Novák</strong></p>
+                <p><a href="mailto:jan.novak@email.cz">jan.novak@email.cz</a></p>
+                <p><a href="tel:+420123456789">+420 123 456 789</a></p>
+            </div>
+            <div class="footer-center">
+                <p>&copy; 2024 Nicolsburg decor. Všechna práva vyhrazena.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
         </div>
-        <p>&copy; 2024 Nicolsburg decor. Všechna práva vyhrazena.</p>
     </footer>
 
     <script src="main.js" defer></script>

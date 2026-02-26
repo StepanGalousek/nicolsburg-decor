@@ -27,12 +27,10 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 5.  **Aktualizace Hero sekce.** (Hotovo)
 6.  **Vytvoření složky pro obrázky.** (Hotovo)
 7.  **Přidání kontaktních údajů.** (Hotovo)
-8.  **Optimalizace a interaktivita.** (Právě probíhá)
-    *   Optimalizace obrázků.
-    *   Líné načítání (Lazy Loading).
-    *   Odložení načítání JavaScriptu.
-    *   Plynulé posouvání (Smooth scroll).
-    *   Tlačítko "Zpět nahoru".
-    *   Animace při scrollu.
-    *   Interaktivní galerie "před a po".
+8.  **Optimalizace a interaktivita.** (Hotovo)
+9.  **Úprava patičky (footeru).** (Hotovo)
+10. **Integrace menu do Hero sekce.** (Právě probíhá)
+    *   Přesun navigace do hero sekce.
+    *   Nastavení obrázku na pozadí.
+    *   Úprava stylů pro transparentní menu.
 
