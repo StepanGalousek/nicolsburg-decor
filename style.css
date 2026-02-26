@@ -4,6 +4,8 @@ body {
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
+    -webkit-font-smoothing: antialiased; /* Hladší písmo na webkitu */
+    -moz-osx-font-smoothing: grayscale; /* Hladší písmo na firefoxu */
 }
 
 html {
@@ -18,6 +20,7 @@ header {
     padding: 1rem 0;
     z-index: 1000;
     background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -64,10 +67,9 @@ section {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    color: white; /* Výchozí barva pro text, který není ve spanu */
+    color: white;
 }
 
-/* Opravené barvy pro nadpis s vyšší specificitou */
 .hero-content h1 .color-primary {
     color: #113253;
 }
@@ -92,18 +94,17 @@ section {
 
 .hero-buttons {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-/* Nový sjednocený styl tlačítek s modrým okrajem */
 .btn {
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
     margin-top: 1rem; 
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -112,40 +113,45 @@ section {
     box-sizing: border-box;
     background-color: #C1A273;
     color: white;
-    border: 2px solid #113253; /* Tmavě modrý okraj */
+    border: 2px solid #113253;
 }
 
 .btn:hover {
-    background-color: #d4b98f; /* Lehce světlejší hořčicová */
-    border-color: #113253; /* Tmavě modrý okraj i při hoveru */
+    background-color: #d4b98f;
+    border-color: #113253;
     color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-
-/* Staré specifické třídy jsou resetovány, styl je sjednocen v .btn */
-.btn-primary, .btn-secondary { }
-.btn-primary:hover, .btn-secondary:hover { }
-
 
 #about {
     background-color: white;
 }
 
-/* Sekce O nás - dva sloupce */
 .about-container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.about-text,
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
 .about-image {
     flex: 1;
     min-width: 300px;
 }
 
-.about-text {
-    text-align: left;
+.about-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 .about-image img {
@@ -153,7 +159,6 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 
 #services {
     background-color: #f9f9f9;
@@ -232,7 +237,6 @@ section {
 
 #contact {
     background-color: #f9f9f9;
-    color: #333;
 }
 
 .contact-info {
@@ -243,10 +247,6 @@ section {
 .contact-info a {
     color: #ff6600;
     text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
 }
 
 #contact form {
@@ -260,23 +260,17 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#contact h2 {
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-#contact input,
-#contact textarea {
+#contact input, #contact textarea {
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-/* Patička */
 footer {
-    background-color: #C1A273; /* Zlatá barva */
-    color: #113253; /* Tmavě modrá pro text */
+    background-color: #C1A273;
+    color: #113253;
     padding: 2rem;
     margin-top: 3rem;
 }
@@ -289,184 +283,57 @@ footer {
     gap: 1.5rem;
 }
 
-.footer-left, .footer-center, .footer-right {
-    flex: 1;
-    text-align: center;
-}
+.footer-left, .footer-center, .footer-right { flex: 1; text-align: center; }
+.footer-left { text-align: left; }
+.footer-right { text-align: right; }
+.footer-left p, .footer-center p { margin: 0.2rem 0; }
+.footer-left a { color: #113253; text-decoration: none; }
+.footer-right a { color: #113253; font-size: 1.8rem; margin-left: 1rem; transition: color 0.3s; }
 
-.footer-left {
-    text-align: left;
-}
+#back-to-top-btn { position: fixed; bottom: 20px; right: 20px; background-color: #ff6600; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 1000; }
+#back-to-top-btn.show { opacity: 1; pointer-events: auto; }
 
-.footer-right {
-    text-align: right;
-}
-
-.footer-left p,
-.footer-center p {
-    margin: 0.2rem 0;
-}
-
-.footer-left a {
-    color: #113253; /* Tmavě modrá pro odkazy */
-    text-decoration: none;
-}
-
-.footer-left a:hover {
-    text-decoration: underline;
-}
-
-.footer-right a {
-    color: #113253; /* Tmavě modrá pro ikony */
-    font-size: 1.8rem;
-    margin-left: 1rem;
-    transition: color 0.3s;
-}
-
-.footer-right a:hover {
-    color: #000; /* Změna barvy při najetí myší */
-}
-
-
-/* Tlačítko Zpět nahoru */
-#back-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 1000;
-}
-
-#back-to-top-btn:hover {
-    background-color: #cc5200;
-}
-
-#back-to-top-btn.show {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Animace při scrollu */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
 /* === Responzivní design === */
 
 @media (max-width: 992px) {
-    .service-item,
-    .review {
-        width: calc(50% - 4rem);
-    }
+    .service-item, .review { width: calc(50% - 4rem); }
+    .about-container { gap: 2rem; }
 }
-
 
 @media (max-width: 768px) {
     header {
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(17, 50, 83, 0.8); /* Tmavě modrá s průhledností */
         padding-bottom: 0.5rem;
     }
-
-    nav ul li {
-        display: block;
-        margin: 0;
-    }
-
-    nav ul {
-        padding: 0.5rem 0 0 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 0.5rem 0;
-    }
-
-    main {
-        padding-top: 0;
-    }
-
-    #hero {
-        min-height: 70vh;
-        padding-top: 10rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    section {
-        padding: 3rem 1.5rem;
-    }
-
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    #gallery .gallery-item {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left, .footer-center, .footer-right {
-        text-align: center;
-        flex-basis: auto;
-    }
-
-    .footer-right {
-        margin-top: 1rem;
-    }
-
-    .footer-right a {
-        margin: 0 0.75rem;
-    }
+    nav ul li { display: block; margin: 0; }
+    nav ul { padding: 0.5rem 0 0 0; }
+    nav ul li a { display: block; padding: 0.8rem 0; }
+    main { padding-top: 0; }
+    #hero { min-height: 80vh; padding-top: 8rem; padding-bottom: 4rem; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .hero-content h2 { font-size: 1.5rem; }
+    section { padding: 3rem 1.5rem; }
+    .about-container { flex-direction: column; gap: 2rem; }
+    .about-text { text-align: center; }
+    .about-text p { text-align: justify; font-size: 1.15rem; }
+    #gallery .gallery-item { flex-direction: column; gap: 1rem; }
+    .footer-container { flex-direction: column; text-align: center; }
+    .footer-left, .footer-center, .footer-right { text-align: center; flex-basis: auto; }
+    .footer-right { margin-top: 1rem; }
+    .footer-right a { margin: 0 0.75rem; }
 }
 
 @media (max-width: 576px) {
-    main {
-        padding-top: 0;
-    }
-    
-    #hero {
-        min-height: 60vh;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .service-item,
-    .review {
-        width: 90%;
-    }
-
-    #contact form {
-        width: 90%;
-        margin: 0 auto;
-    }
+    #hero { min-height: 70vh; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content h2 { font-size: 1.3rem; }
+    .btn { padding: 0.8rem 1.5rem; min-width: 200px; }
+    .hero-buttons { gap: 1rem; }
+    .service-item, .review { width: 90%; }
+    .about-text p { text-align: left; font-size: 1.1rem; }
+    #contact form { width: 100%; padding: 1.5rem; }
+    section { padding: 3rem 1rem; }
 }

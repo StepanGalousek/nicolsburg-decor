@@ -34,8 +34,10 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 12. **Změna barvy patičky.** (Hotovo)
 13. **Oprava designu Hero sekce.** (Hotovo)
 14. **Sjednocení designu tlačítek.** (Hotovo)
-15. **Rozdělení sekce "O nás".** (Právě probíhá)
-    *   Vytvoření dvoustĺpcového rozložení (text vlevo, obrázek vpravo).
-    *   Přidání zástupného obrázku.
-    *   Zajištění responzivity.
+15. **Rozdělení sekce "O nás".** (Hotovo)
+16. **Aktualizace textu a fotky v sekci "O nás".** (Hotovo)
+17. **Úprava stylu sekce "O nás".** (Hotovo)
+18. **Finální optimalizace pro mobilní zařízení.** (Právě probíhá)
+    *   Revize a doladění media queries pro všechny sekce.
+    *   Zajištění perfektního zobrazení a čitelnosti na malých obrazovkách.
 
