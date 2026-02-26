@@ -130,6 +130,31 @@ section {
     background-color: white;
 }
 
+/* Sekce O nás - dva sloupce */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-text,
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
 #services {
     background-color: #f9f9f9;
 }
@@ -388,6 +413,14 @@ footer {
 
     section {
         padding: 3rem 1.5rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
     }
 
     #gallery .gallery-item {
