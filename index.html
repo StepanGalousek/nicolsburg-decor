@@ -1,14 +1,122 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malířství - Profesionální malířské služby</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Úvod</a></li>
+                <li><a href="#about">O nás</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#reviews">Recenze</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Profesionální malířské služby</h1>
+                <p>Kvalita a preciznost pro váš domov i kancelář.</p>
+                <a href="#contact" class="btn">Domluvit si schůzku</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>O nás</h2>
+            <p>Jsme tým zkušených malířů s vášní pro detail. Naším cílem je přinášet našim zákazníkům radost z krásně vymalovaných prostor. Používáme pouze ty nejkvalitnější materiály a nejmodernější techniky, abychom zaručili dokonalý výsledek.</p>
+        </section>
+
+        <section id="services">
+            <h2>Naše služby</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Malování interiérů</h3>
+                    <p>Profesionální malování pokojů, bytů a kanceláří s důrazem na čistotu a detail.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-home"></i>
+                    <h3>Nátěry fasád</h3>
+                    <p>Odborné nátěry fasád, které váš dům ochrání a dodají mu nový vzhled.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-door-closed"></i>
+                    <h3>Lakýrnické práce</h3>
+                    <p>Precizní lakování dveří, oken, nábytku a dalších prvků v interiéru i exteriéru.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Dekorační stěrky</h3>
+                    <p>Aplikace moderních dekoračních stěrek pro jedinečný a luxusní vzhled vašich stěn.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Recenze</h2>
+            <div class="review-container">
+                <div class="review">
+                    <img src="https://placehold.co/100" alt="Zákazník 1">
+                    <p>"Naprostá spokojenost! Rychlá domluva, precizní práce a skvělý výsledek. Doporučuji!"</p>
+                    <span>- Novák, Praha</span>
+                </div>
+                <div class="review">
+                    <img src="https://placehold.co/100" alt="Zákazník 2">
+                    <p>"Skvělá komunikace a flexibilita. Pan malíř nám poradil s výběrem barev a výsledek je úžasný."</p>
+                    <span>- Svobodová, Brno</span>
+                </div>
+                <div class="review">
+                    <img src="https://placehold.co/100" alt="Zákazník 3">
+                    <p>"Profesionální přístup od začátku do konce. S výsledkem jsme nadmíru spokojeni. Určitě využijeme znovu."</p>
+                    <span>- Dvořák, Ostrava</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Před a po</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 1">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 2">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 3">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontaktujte nás</h2>
+            <form>
+                <input type="text" name="name" placeholder="Vaše jméno" required>
+                <input type="email" name="email" placeholder="Váš e-mail" required>
+                <input type="tel" name="phone" placeholder="Vaše telefonní číslo">
+                <textarea name="message" placeholder="Vaše zpráva" required></textarea>
+                <button type="submit" class="btn">Odeslat poptávku</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Malířství. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
