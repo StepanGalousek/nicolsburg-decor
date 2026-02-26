@@ -10,7 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Změna - Header je nyní součástí Hero sekce */
 header {
     position: absolute;
     top: 0;
@@ -18,7 +17,7 @@ header {
     width: 100%;
     padding: 1rem 0;
     z-index: 1000;
-    background-color: transparent; /* Průhledné pozadí */
+    background-color: transparent;
 }
 
 nav ul {
@@ -37,10 +36,9 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Stín pro lepší čitelnost */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-/* Změna - Main už nepotřebuje padding-top */
 main {
     padding-top: 0;
 }
@@ -50,14 +48,13 @@ section {
     text-align: center;
 }
 
-/* Změna - Hero sekce s obrázkem na pozadí */
 #hero {
     position: relative;
     color: white;
     text-align: center;
-    padding: 8rem 2rem 6rem; /* Větší padding nahoře pro menu */
+    padding: 8rem 2rem 6rem;
     background: url('images/Gemini_Generated_Image_8ex4x98ex4x98ex4.jpg') no-repeat center center/cover;
-    min-height: 90vh; /* Zajistí, že sekce zabere většinu obrazovky */
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,8 +64,15 @@ section {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero-content .color-primary {
+    color: #113253; 
+}
+
+.hero-content .color-secondary {
+    color: #C1A273;
 }
 
 .hero-content h2 {
@@ -85,22 +89,47 @@ section {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .btn {
-    background-color: #ff6600;
-    color: white;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     margin-top: 1rem; 
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
 }
 
-.btn:hover {
-    background-color: #cc5200;
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+    border-color: #ff6600;
 }
+
+.btn-primary:hover {
+    background-color: #cc5200;
+    border-color: #cc5200;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #C1A273;
+    border-color: #C1A273;
+}
+
+.btn-secondary:hover {
+    background-color: #C1A273;
+    color: white;
+}
+
 
 #about {
     background-color: white;
@@ -226,8 +255,8 @@ section {
 
 /* Patička */
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #C1A273; /* Zlatá barva */
+    color: #113253; /* Tmavě modrá pro text */
     padding: 2rem;
     margin-top: 3rem;
 }
@@ -259,7 +288,7 @@ footer {
 }
 
 .footer-left a {
-    color: white;
+    color: #113253; /* Tmavě modrá pro odkazy */
     text-decoration: none;
 }
 
@@ -268,14 +297,14 @@ footer {
 }
 
 .footer-right a {
-    color: white;
+    color: #113253; /* Tmavě modrá pro ikony */
     font-size: 1.8rem;
     margin-left: 1rem;
     transition: color 0.3s;
 }
 
 .footer-right a:hover {
-    color: #ff6600;
+    color: #000; /* Změna barvy při najetí myší */
 }
 
 
@@ -321,7 +350,6 @@ footer {
 
 /* === Responzivní design === */
 
-/* Pro tablety a menší zařízení (až do 992px) */
 @media (max-width: 992px) {
     .service-item,
     .review {
@@ -330,9 +358,7 @@ footer {
 }
 
 
-/* Pro tablety (až do 768px) */
 @media (max-width: 768px) {
-    /* Změna - Na mobilu bude mít header pozadí pro lepší čitelnost */
     header {
         background-color: rgba(0,0,0,0.5);
         padding-bottom: 0.5rem;
@@ -352,14 +378,13 @@ footer {
         padding: 0.5rem 0;
     }
 
-    /* Změna - odstraněn padding-top z main */
     main {
         padding-top: 0;
     }
 
     #hero {
         min-height: 70vh;
-        padding-top: 10rem; /* Větší padding pro mobilní menu */
+        padding-top: 10rem;
     }
 
     .hero-content h1 {
@@ -394,9 +419,7 @@ footer {
     }
 }
 
-/* Pro mobilní telefony (až do 576px) */
 @media (max-width: 576px) {
-    /* Změna - odstraněn padding-top z main */
     main {
         padding-top: 0;
     }
