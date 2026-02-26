@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="fade-in-section">
             <div class="hero-content">
                 <h1>Nicolsburg decor</h1>
                 <h2>Profesionální malířské služby</h2>
@@ -32,12 +32,12 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="fade-in-section">
             <h2>O nás</h2>
             <p>Jsme tým zkušených malířů s vášní pro detail. Naším cílem je přinášet našim zákazníkům radost z krásně vymalovaných prostor. Používáme pouze ty nejkvalitnější materiály a nejmodernější techniky, abychom zaručili dokonalý výsledek.</p>
         </section>
 
-        <section id="services">
+        <section id="services" class="fade-in-section">
             <h2>Naše služby</h2>
             <div class="services-container">
                 <div class="service-item">
@@ -63,46 +63,46 @@
             </div>
         </section>
 
-        <section id="reviews">
+        <section id="reviews" class="fade-in-section">
             <h2>Recenze</h2>
             <div class="review-container">
                 <div class="review">
-                    <img src="https://placehold.co/100" alt="Zákazník 1">
+                    <img src="https://placehold.co/100" alt="Zákazník 1" loading="lazy">
                     <p>"Naprostá spokojenost! Rychlá domluva, precizní práce a skvělý výsledek. Doporučuji!"</p>
                     <span>- Novák, Praha</span>
                 </div>
                 <div class="review">
-                    <img src="https://placehold.co/100" alt="Zákazník 2">
+                    <img src="https://placehold.co/100" alt="Zákazník 2" loading="lazy">
                     <p>"Skvělá komunikace a flexibilita. Pan malíř nám poradil s výběrem barev a výsledek je úžasný."</p>
                     <span>- Svobodová, Brno</span>
                 </div>
                 <div class="review">
-                    <img src="https://placehold.co/100" alt="Zákazník 3">
+                    <img src="https://placehold.co/100" alt="Zákazník 3" loading="lazy">
                     <p>"Profesionální přístup od začátku do konce. S výsledkem jsme nadmíru spokojeni. Určitě využijeme znovu."</p>
                     <span>- Dvořák, Ostrava</span>
                 </div>
             </div>
         </section>
 
-        <section id="gallery">
+        <section id="gallery" class="fade-in-section">
             <h2>Před a po</h2>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 1">
-                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 1">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 1" loading="lazy">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 1" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 2">
-                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 2">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 2" loading="lazy">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 2" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 3">
-                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 3">
+                    <img src="https://placehold.co/400x300/CCCCCC/FFFFFF?text=Před" alt="Před vymalováním 3" loading="lazy">
+                    <img src="https://placehold.co/400x300/A8D8B9/FFFFFF?text=Po" alt="Po vymalování 3" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="fade-in-section">
             <h2>Kontakt</h2>
             <div class="contact-info">
                 <p><strong>Jan Novák</strong></p>
@@ -121,6 +121,8 @@
         </section>
     </main>
 
+    <button id="back-to-top-btn" title="Zpět nahoru"><i class="fas fa-arrow-up"></i></button>
+
     <footer>
         <div class="footer-content">
             <p><strong>Jan Novák</strong></p>
@@ -130,6 +132,6 @@
         <p>&copy; 2024 Nicolsburg decor. Všechna práva vyhrazena.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

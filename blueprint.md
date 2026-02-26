@@ -1,4 +1,3 @@
-
 # Blueprint: Webová stránka pro malíře
 
 Tento dokument slouží jako plán pro vývoj webové stránky pro profesionálního malíře. Cílem je vytvořit moderní, responzivní a uživatelsky přívětivou prezentaci, která bude efektivně prezentovat služby a umožní snadnou komunikaci se zákazníky.
@@ -27,6 +26,13 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 4.  **Optimalizace pro mobilní telefony a tablety.** (Hotovo)
 5.  **Aktualizace Hero sekce.** (Hotovo)
 6.  **Vytvoření složky pro obrázky.** (Hotovo)
-7.  **Přidání kontaktních údajů.** (Právě probíhá)
-8.  **Přidání interaktivity pomocí JavaScriptu (pokud bude potřeba).**
+7.  **Přidání kontaktních údajů.** (Hotovo)
+8.  **Optimalizace a interaktivita.** (Právě probíhá)
+    *   Optimalizace obrázků.
+    *   Líné načítání (Lazy Loading).
+    *   Odložení načítání JavaScriptu.
+    *   Plynulé posouvání (Smooth scroll).
+    *   Tlačítko "Zpět nahoru".
+    *   Animace při scrollu.
+    *   Interaktivní galerie "před a po".
 

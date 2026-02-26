@@ -1,1 +1,34 @@
-class BeforeAfterSlider extends HTMLElement {\n    constructor() {\n        super();\n        const shadow = this.attachShadow({ mode: 'open' });\n\n        const wrapper = document.createElement('div');\n        wrapper.setAttribute('class', 'wrapper');\n\n        const beforeImg = document.createElement('img');\n        beforeImg.setAttribute('src', this.getAttribute('before'));\n        beforeImg.setAttribute('class', 'before');\n\n        const afterImg = document.createElement('img');\n        afterImg.setAttribute('src', this.getAttribute('after'));\n        afterImg.setAttribute('class', 'after');\n\n        const slider = document.createElement('div');\n        slider.setAttribute('class', 'slider');\n\n        wrapper.appendChild(beforeImg);\n        wrapper.appendChild(afterImg);\n        wrapper.appendChild(slider);\n\n        const style = document.createElement('style');\n        style.textContent = `\n            .wrapper {\n                position: relative;\n                width: 100%;\n                max-width: 800px;\n                margin: 0 auto;\n                overflow: hidden;\n                border-radius: 8px;\n                box-shadow: 0 4px 15px rgba(0,0,0,0.2);\n            }\n            .before, .after {\n                width: 100%;\n                height: auto;\n                display: block;\n            }\n            .after {\n                position: absolute;\n                top: 0;\n                left: 0;\n                width: 50%; /* Start at 50% */\n                object-fit: cover;\n                object-position: left;\n                clip-path: inset(0 50% 0 0);\n            }\n            .slider {\n                position: absolute;\n                top: 0;\n                left: 50%;\n                width: 4px;\n                height: 100%;\n                background-color: #ff6600;\n                cursor: ew-resize;\n                transform: translateX(-50%);\n            }\n        `;\n\n        shadow.appendChild(style);\n        shadow.appendChild(wrapper);\n\n        let isDragging = false;\n\n        slider.addEventListener('mousedown', () => {\n            isDragging = true;\n        });\n\n        wrapper.addEventListener('mouseup', () => {\n            isDragging = false;\n        });\n\n        wrapper.addEventListener('mouseleave', () => {\n            isDragging = false;\n        });\n\n        wrapper.addEventListener('mousemove', (e) => {\n            if (!isDragging) return;\n\n            const rect = wrapper.getBoundingClientRect();\n            const x = e.clientX - rect.left;\n            const width = rect.width;\n            let percentage = (x / width) * 100;\n\n            if (percentage < 0) percentage = 0;\n            if (percentage > 100) percentage = 100;\n\n            slider.style.left = `\${percentage}%`;\n            afterImg.style.clipPath = `inset(0 \${100 - percentage}% 0 0)`;\n            afterImg.style.width = `\${percentage}%`;\n        });\n    }\n}\n\ncustomElements.define('before-after-slider', BeforeAfterSlider);\n
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Tlačítko "Zpět nahoru"
+    const backToTopButton = document.getElementById('back-to-top-btn');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) { // Zobrazit po odscrollování o 300px
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Animace při scrollu
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Zobrazit, když je vidět 10% sekce
+
+    fadeInSections.forEach(section => {
+        observer.observe(section);
+    });
+
+});
