@@ -41,4 +41,5 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 18. **Zarovnání nadpisu "O nás".** (Hotovo)
 19. **Přidání sekce "Ceník".** (Hotovo)
 20. **Finální optimalizace pro mobilní zařízení.** (Hotovo)
+21. **Optimalizace pro SEO.** (Hotovo)
 
