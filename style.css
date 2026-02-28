@@ -1,11 +1,15 @@
 /* Základní styly */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
-    -webkit-font-smoothing: antialiased; /* Hladší písmo na webkitu */
-    -moz-osx-font-smoothing: grayscale; /* Hladší písmo na firefoxu */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -13,21 +17,21 @@ html {
 }
 
 header {
-    position: fixed; /* Změna na fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 2rem; /* Přidáno odsazení */
+    padding: 1rem 2rem;
     z-index: 1000;
-    background-color: transparent; /* Průhledné ve výchozím stavu */
+    background-color: transparent;
     transition: background-color 0.3s ease;
-    display: flex; /* Pro zarovnání loga a menu */
-    justify-content: space-between; /* Pro zarovnání loga a menu */
-    align-items: center; /* Pro zarovnání loga a menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header.scrolled {
-    background-color: rgba(17, 50, 83, 0.9); /* Tmavě modrá s průhledností při rolování */
+    background-color: rgba(17, 50, 83, 0.9);
 }
 
 .logo {
@@ -40,19 +44,20 @@ header.scrolled {
 }
 
 .hamburger-menu {
-    display: none; /* Skryto ve výchozím stavu */
+    display: none;
     background: none;
     border: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .nav-menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Zobrazeno jako flex na desktopech */
+    display: flex;
 }
 
 .nav-menu li {
@@ -77,7 +82,6 @@ section {
 
 #hero {
     position: relative;
-    text-align: center;
     padding: 8rem 2rem 6rem;
     background: url('images/Gemini_Generated_Image_8ex4x98ex4x98ex4.jpg') no-repeat center center/cover;
     min-height: 90vh;
@@ -134,7 +138,6 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     min-width: 240px;
     text-align: center;
-    box-sizing: border-box;
     background-color: #C1A273;
     color: white;
     border: 2px solid #113253;
@@ -165,11 +168,11 @@ section {
     flex: 3;
     min-width: 300px;
     padding: 0 2rem;
-    text-align: center; /* Zarovná h2 na střed */
+    text-align: center;
 }
 
 .about-text h2 {
-    margin-bottom: 1.5rem; /* Přidá mezeru pod nadpis */
+    margin-bottom: 1.5rem;
 }
 
 .about-image {
@@ -190,29 +193,29 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#services {
+#services, #pricing {
     background-color: #f9f9f9;
 }
 
-.services-container, .pricing-container {
+.services-container, .pricing-container, .review-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.service-item, .pricing-item {
+.service-item, .pricing-item, .review {
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px; /* Upravena šířka */
+    width: 320px;
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex; /* Pro lepší zarovnání */
-    flex-direction: column; /* Pro lepší zarovnání */
+    display: flex;
+    flex-direction: column;
 }
 
-.service-item:hover, .pricing-item:hover {
+.service-item:hover, .pricing-item:hover, .review:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
@@ -239,7 +242,7 @@ section {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
-    flex-grow: 1; /* Zajistí, že seznam vyplní dostupný prostor */
+    flex-grow: 1;
 }
 
 .pricing-item li {
@@ -248,44 +251,34 @@ section {
 }
 
 .pricing-item .btn {
-    margin-top: auto; /* Tlačítko bude vždy dole */
-}
-
-.review-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.review {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
+    margin-top: auto;
 }
 
 .review img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+    display: block;
+    object-fit: cover;
 }
 
 #gallery .gallery-container {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 #gallery .gallery-item {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
+    flex-basis: 100%;
+    max-width: 820px;
 }
 
 #gallery .gallery-item img {
-    width: 100%;
-    max-width: 400px;
+    width: 50%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -353,66 +346,78 @@ footer {
 
 /* === Responzivní design === */
 
-@media (max-width: 992px) {
-    .service-item, .review, .pricing-item { width: calc(50% - 4rem); }
-    .about-container { gap: 2rem; }
+/* Tablety (na šířku) */
+@media (max-width: 1024px) {
+    .hero-content h1 { font-size: 3rem; }
+    .hero-content h2 { font-size: 1.6rem; }
+    .service-item, .pricing-item, .review {
+        width: calc(50% - 2rem);
+    }
 }
 
+/* Tablety (na výšku) a velké telefony */
 @media (max-width: 768px) {
+    header {
+        background-color: rgba(17, 50, 83, 0.9);
+    }
     .nav-menu {
-        display: none; /* Skryje menu na menších obrazovkách */
+        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px; /* Odsazení od headeru */
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(17, 50, 83, 0.95);
-        text-align: center;
+        height: 100%;
+        background-color: rgba(17, 50, 83, 0.98);
+        justify-content: center;
+        align-items: center;
     }
-
     .nav-menu.active {
-        display: flex; /* Zobrazí menu po kliknutí na hamburger */
+        display: flex;
     }
-
     .nav-menu li {
-        margin: 0;
+        margin: 1.5rem 0;
     }
-
-    .nav-menu li a {
-        display: block;
-        padding: 1.5rem 0;
-    }
-
     .hamburger-menu {
-        display: block; /* Zobrazí hamburger na menších obrazovkách */
+        display: block;
     }
 
-    header {
-        background-color: rgba(17, 50, 83, 0.8); /* Tmavě modrá s průhledností */
-    }
-    main { padding-top: 0; }
-    #hero { min-height: 80vh; padding-top: 8rem; padding-bottom: 4rem; }
+    section { padding: 3rem 1.5rem; }
+    #hero { min-height: 80vh; padding-top: 6rem; padding-bottom: 4rem; }
     .hero-content h1 { font-size: 2.8rem; }
     .hero-content h2 { font-size: 1.5rem; }
-    section { padding: 3rem 1.5rem; }
+
     .about-container { flex-direction: column; gap: 2rem; }
-    .about-text { text-align: center; padding: 0; } /* Reset odsazení na mobilu */
-    .about-text p { text-align: justify; font-size: 1.15rem; }
-    #gallery .gallery-item { flex-direction: column; gap: 1rem; }
+    .about-text { padding: 0; }
+    .about-text p { font-size: 1.1rem; text-align: left; }
+
+    .service-item, .pricing-item, .review {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #gallery .gallery-item {
+        flex-direction: column;
+    }
+    #gallery .gallery-item img {
+        width: 100%;
+    }
+
     .footer-container { flex-direction: column; text-align: center; }
     .footer-left, .footer-center, .footer-right { text-align: center; flex-basis: auto; }
     .footer-right { margin-top: 1rem; }
     .footer-right a { margin: 0 0.75rem; }
 }
 
-@media (max-width: 576px) {
-    #hero { min-height: 70vh; }
+/* Malé telefony */
+@media (max-width: 480px) {
+    section { padding: 2.5rem 1rem; }
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content h2 { font-size: 1.3rem; }
-    .btn { padding: 0.8rem 1.5rem; min-width: 200px; }
-    .hero-buttons { gap: 1rem; }
-    .service-item, .review, .pricing-item { width: 90%; }
-    .about-text p { text-align: left; font-size: 1.1rem; }
-    #contact form { width: 100%; padding: 1.5rem; }
-    section { padding: 3rem 1rem; }
+    .btn { padding: 0.8rem 1.5rem; width: 100%; min-width: 0; }
+    .hero-buttons { flex-direction: column; gap: 1rem; align-items: center; }
+
+    .about-text p { font-size: 1rem; }
+
+    #contact form { padding: 1.5rem; }
 }
