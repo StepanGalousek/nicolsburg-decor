@@ -155,20 +155,25 @@ section {
 .about-container {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Zmenšená mezera */
+    gap: 2rem;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .about-text {
-    flex: 3; /* Více prostoru pro text */
+    flex: 3;
     min-width: 300px;
-    padding: 0 2rem; /* Přidáno horizontální odsazení */
+    padding: 0 2rem;
+    text-align: center; /* Zarovná h2 na střed */
+}
+
+.about-text h2 {
+    margin-bottom: 1.5rem; /* Přidá mezeru pod nadpis */
 }
 
 .about-image {
-    flex: 2; /* Méně prostoru pro obrázek */
+    flex: 2;
     min-width: 300px;
 }
 
@@ -189,23 +194,25 @@ section {
     background-color: #f9f9f9;
 }
 
-.services-container {
+.services-container, .pricing-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
-.service-item {
+.service-item, .pricing-item {
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 250px;
+    width: 300px; /* Upravena šířka */
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Pro lepší zarovnání */
+    flex-direction: column; /* Pro lepší zarovnání */
 }
 
-.service-item:hover {
+.service-item:hover, .pricing-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
@@ -216,9 +223,32 @@ section {
     margin-bottom: 1rem;
 }
 
-.service-item h3 {
+.service-item h3, .pricing-item h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+.pricing-item .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #113253;
+    margin: 1rem 0;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    flex-grow: 1; /* Zajistí, že seznam vyplní dostupný prostor */
+}
+
+.pricing-item li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.pricing-item .btn {
+    margin-top: auto; /* Tlačítko bude vždy dole */
 }
 
 .review-container {
@@ -324,7 +354,7 @@ footer {
 /* === Responzivní design === */
 
 @media (max-width: 992px) {
-    .service-item, .review { width: calc(50% - 4rem); }
+    .service-item, .review, .pricing-item { width: calc(50% - 4rem); }
     .about-container { gap: 2rem; }
 }
 
@@ -381,7 +411,7 @@ footer {
     .hero-content h2 { font-size: 1.3rem; }
     .btn { padding: 0.8rem 1.5rem; min-width: 200px; }
     .hero-buttons { gap: 1rem; }
-    .service-item, .review { width: 90%; }
+    .service-item, .review, .pricing-item { width: 90%; }
     .about-text p { text-align: left; font-size: 1.1rem; }
     #contact form { width: 100%; padding: 1.5rem; }
     section { padding: 3rem 1rem; }

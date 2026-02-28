@@ -11,7 +11,8 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 3.  **Naše služby:** Přehled nabízených služeb s ikonami a krátkým popisem.
 4.  **Recenze:** Ukázky spokojenosti předchozích zákazníků.
 5.  **Před a po galerie:** Interaktivní galerie srovnávající stav před a po realizaci.
-6.  **Kontakt:** Formulář pro rychlé a snadné odeslání poptávky a přímé kontaktní údaje.
+6.  **Ceník:** Orientační ceník vybraných služeb.
+7.  **Kontakt:** Formulář pro rychlé a snadné odeslání poptávky a přímé kontaktní údaje.
 
 ## Design a technologie
 
@@ -37,7 +38,9 @@ Webová stránka bude jednostránková (one-page) s plynulým posouváním mezi 
 15. **Rozdělení sekce "O nás".** (Hotovo)
 16. **Aktualizace textu a fotky v sekci "O nás".** (Hotovo)
 17. **Úprava stylu sekce "O nás".** (Hotovo)
-18. **Finální optimalizace pro mobilní zařízení.** (Právě probíhá)
+18. **Zarovnání nadpisu "O nás".** (Hotovo)
+19. **Přidání sekce "Ceník".** (Hotovo)
+20. **Finální optimalizace pro mobilní zařízení.** (Právě probíhá)
     *   Revize a doladění media queries pro všechny sekce.
     *   Zajištění perfektního zobrazení a čitelnosti na malých obrazovkách.
 
